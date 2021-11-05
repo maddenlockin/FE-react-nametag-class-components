@@ -12,30 +12,36 @@ const Controls = ({
 }) => {
   return (
     <form onSubmit={onSubmit}>
-      <label htmlFor="greeting">Greeting</label>
-      <input
-        id="greeting"
-        name="greeting"
-        type="text"
-        value={greeting}
-        onChange={onGreetingChange}
-      />
-      <label htmlFor="name">Name</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        value={name}
-        onChange={onNameChange}
-      />
-      <label htmlFor="pronouns">Pronouns</label>
-      <input
-        id="pronouns"
-        name="pronouns"
-        type="text"
-        value={pronouns}
-        onChange={onPronounChange}
-      />
+      <label htmlFor="greeting">
+        Greeting
+        <input
+          id="greeting"
+          name="greeting"
+          type="text"
+          onChange={onGreetingChange}
+          aria-label="greeting"
+        />
+      </label>
+      <label htmlFor="name">
+        Name
+        <input
+          id="name"
+          name="name"
+          type="text"
+          onChange={onNameChange}
+          aria-label="name"
+        />
+      </label>
+      <label htmlFor="pronouns">
+        Pronouns
+        <input
+          id="pronouns"
+          name="pronouns"
+          type="text"
+          onChange={onPronounChange}
+          aria-label="pronouns"
+        />
+      </label>
       <button aria-label="submit">Submit</button>
     </form>
   );

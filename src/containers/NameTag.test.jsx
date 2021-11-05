@@ -25,4 +25,15 @@ describe('NameTag container', () => {
 
     await screen.findByText('Hi, my name is');
   });
+
+  it('changes the displayed pronouns', async () => {
+    render(<NameTag />);
+
+    const prosInput = await screen.findByRole('textbox', {
+      name: 'pronouns',
+    });
+    userEvent.type(prosInput, '{selectall}{del}they/them');
+
+    await screen.findByText('they/them');
+  });
 });

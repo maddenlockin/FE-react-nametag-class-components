@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import Controls from "../components/Controls";
-import Display from "../components/Display";
+import React, { Component } from 'react';
+import Controls from '../components/name-tag/Controls';
+import Display from '../components/name-tag/Display';
 
 export default class NameTag extends Component {
   state = {
-    greeting: "",
-    name: "",
-    pronouns: "",
-    submitGreet: "",
-    submitName: "",
-    submitPros: "",
+    greeting: '',
+    name: '',
+    pronouns: '',
+    submitGreet: '',
+    submitName: '',
+    submitPros: '',
   };
 
   handleGreetingChange = (e) => {
