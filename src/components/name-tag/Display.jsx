@@ -68,10 +68,10 @@ const Display = ({ submitGreet, submitName, submitPros }) => {
   );
 };
 
-// Display.propTypes = {
-//   submitGreet: PropTypes.func.isRequired,
-//   submitName: PropTypes.func.isRequired,
-//   submitPros: PropTypes.func.isRequired,
-//};
+Display.propTypes = {
+  submitGreet: PropTypes.func.isRequired,
+  submitName: PropTypes.func.isRequired,
+  submitPros: PropTypes.func.isRequired,
+};
 
 export default Display;

@@ -2,9 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Controls = ({
-  greeting,
-  name,
-  pronouns,
   onGreetingChange,
   onNameChange,
   onPronounChange,
@@ -15,8 +12,8 @@ const Controls = ({
       <label htmlFor="greeting">
         Greeting
         <input
-          id="greeting"
-          name="greeting"
+        //   id="greeting"
+        //   name="greeting"
           type="text"
           onChange={onGreetingChange}
           aria-label="greeting"
@@ -25,8 +22,8 @@ const Controls = ({
       <label htmlFor="name">
         Name
         <input
-          id="name"
-          name="name"
+        //   id="name"
+        //   name="name"
           type="text"
           onChange={onNameChange}
           aria-label="name"
@@ -35,8 +32,8 @@ const Controls = ({
       <label htmlFor="pronouns">
         Pronouns
         <input
-          id="pronouns"
-          name="pronouns"
+        //   id="pronouns"
+        //   name="pronouns"
           type="text"
           onChange={onPronounChange}
           aria-label="pronouns"
@@ -48,9 +45,9 @@ const Controls = ({
 };
 
 Controls.propTypes = {
-  greeting: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  pronouns: PropTypes.string.isRequired,
+//   greeting: PropTypes.string,
+//   name: PropTypes.string.isRequired,
+//   pronouns: PropTypes.string.isRequired,
   onGreetingChange: PropTypes.func.isRequired,
   onNameChange: PropTypes.func.isRequired,
   onPronounChange: PropTypes.func.isRequired,

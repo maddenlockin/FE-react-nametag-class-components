@@ -4,46 +4,46 @@ import Display from '../components/name-tag/Display';
 
 export default class NameTag extends Component {
   state = {
-    greeting: '',
-    name: '',
-    pronouns: '',
+    // greeting: '',
+    // name: '',
+    // pronouns: '',
     submitGreet: '',
     submitName: '',
     submitPros: '',
   };
 
   handleGreetingChange = (e) => {
-    this.setState({ greeting: e.target.value });
+    this.setState({ submitGreet: e.target.value });
   };
 
   handleNameChange = (e) => {
-    this.setState({ name: e.target.value });
+    this.setState({ submitName: e.target.value });
   };
 
   handlePronounChange = (e) => {
-    this.setState({ pronouns: e.target.value });
+    this.setState({ submitPros: e.target.value });
   };
 
   handleSubmit = async (e) => {
     e.preventDefault();
     this.setState({
-      submitGreet: this.state.greeting,
-      submitName: this.state.name,
-      submitPros: this.state.pronouns,
+      submitGreet: this.state.submitGreet,
+      submitName: this.state.submitName,
+      submitPros: this.state.submitPros,
     });
   };
 
   render() {
-    const { name, pronouns, greeting, submitName, submitGreet, submitPros } =
+    const { submitName, submitGreet, submitPros } =
       this.state;
     return (
       <>
         <Controls
-          greeting={greeting}
+          submitGreet={submitGreet}
           onGreetingChange={this.handleGreetingChange}
-          name={name}
+          submitName={submitName}
           onNameChange={this.handleNameChange}
-          pronouns={pronouns}
+          submitPros={submitPros}
           onPronounChange={this.handlePronounChange}
           onSubmit={this.handleSubmit}
         />
